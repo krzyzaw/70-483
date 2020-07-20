@@ -1,4 +1,5 @@
 ﻿using System;
+using Types.Classes;
 using Types.DataType;
 using Types.Extensions;
 
@@ -8,7 +9,7 @@ namespace Types
     {
         static void Main(string[] args)
         {
-            Immutable.StringImmutableExample();
+            Order order = new Order();
             Console.ReadKey();
         }
     }
