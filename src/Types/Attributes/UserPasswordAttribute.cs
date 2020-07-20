@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Reflection;
+using Types.Classes;
 
 namespace Types.Attributes
 {
@@ -23,6 +25,21 @@ namespace Types.Attributes
             }
 
             return false;
+        }
+    }
+
+    public class TestAttributes : Attribute
+    {
+        public static void Test()
+        {
+            var user = new User("user1@email.com", "secret123", 15);
+            var passwordAttribute = (UserPasswordAttribute)user.GetType()
+                .GetTypeInfo()
+                .GetProperty("Password")
+                .GetCustomAttribute(typeof(UserPasswordAttribute));
+
+            var isPasswordValid = user.Password.Length >= passwordAttribute.Length;
+            Console.WriteLine($"Is valid: {isPasswordValid}");
         }
     }
 }
