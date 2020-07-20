@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Types.Classes;
 using Types.DataType;
 using Types.Extensions;
@@ -11,14 +12,21 @@ namespace Types
     {
         static void Main(string[] args)
         {
-            Enumerator enumerator = new Enumerator(10);
-
-            foreach (var VARIABLE in enumerator)
-            {
-                Console.WriteLine(VARIABLE);
-            }
-
+            ReportHeader();
+            ReportHeaderDebug();
             Console.ReadKey();
+        }
+
+        [Conditional("PROD")]
+        static void ReportHeader()
+        {
+            Console.WriteLine("Trace");
+        }
+
+        [Conditional("RELEASE")]
+        static void ReportHeaderDebug()
+        {
+            Console.WriteLine("Debug");
         }
     }
 }
