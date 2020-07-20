@@ -2,6 +2,7 @@
 using Types.Classes;
 using Types.DataType;
 using Types.Extensions;
+using Types.Generic;
 
 namespace Types
 {
@@ -9,8 +10,6 @@ namespace Types
     {
         static void Main(string[] args)
         {
-            Race race = new Race();
-            race.Begin();
             Console.ReadKey();
         }
     }
