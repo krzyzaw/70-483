@@ -5,6 +5,7 @@ using Types.DataType;
 using Types.Extensions;
 using Types.Generic;
 using Types.Interfaces;
+using Types.Lazy;
 using Types.ObjectLifeCycle;
 
 namespace Types
@@ -13,8 +14,8 @@ namespace Types
     {
         static void Main(string[] args)
         {
-            ResourceWrapper rw = new ResourceWrapper();
-
+            Customer.Test();
+            CustomerLazyLoading.Test();
             Console.ReadKey();
         }
     }
