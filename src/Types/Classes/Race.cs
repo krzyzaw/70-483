@@ -15,6 +15,7 @@ namespace Types.Classes
             {
                 car.Start();
                 car.Accelerate();
+                car.Boost();
             }
         }
     }

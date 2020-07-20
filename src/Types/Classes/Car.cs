@@ -2,7 +2,7 @@
 
 namespace Types.Classes
 {
-    public class Car
+    public abstract class Car
     {
         public double Speed { get; protected set; } = 100;
 
@@ -21,9 +21,10 @@ namespace Types.Classes
 
         public virtual void Accelerate()
         {
-            Console.WriteLine("Accelerating...");
             Speed += Acceleration;
             Console.WriteLine($"Running at: {Speed} km/h");
         }
+
+        public abstract void Boost();
     }
 }

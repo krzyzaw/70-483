@@ -9,5 +9,12 @@ namespace Types.Classes
             Console.WriteLine("Accelerating a sport car...");
             base.Accelerate();
         }
+
+        public override void Boost()
+        {
+            Console.WriteLine("Boosting a sport car...");
+            Speed += 100;
+            Console.WriteLine($"Running at: {Speed} km/h");
+        }
     }
 }
