@@ -11,7 +11,13 @@ namespace Types
     {
         static void Main(string[] args)
         {
-            BankAccount.SortAccount();
+            Enumerator enumerator = new Enumerator(10);
+
+            foreach (var VARIABLE in enumerator)
+            {
+                Console.WriteLine(VARIABLE);
+            }
+
             Console.ReadKey();
         }
     }
