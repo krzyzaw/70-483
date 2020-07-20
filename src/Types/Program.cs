@@ -8,8 +8,7 @@ namespace Types
     {
         static void Main(string[] args)
         {
-            Reference.TestRef();
-            Reference.PersonManipulation();
+            Immutable.StringImmutableExample();
             Console.ReadKey();
         }
     }
