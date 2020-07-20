@@ -13,10 +13,7 @@ namespace Types
     {
         static void Main(string[] args)
         {
-            using (DisposableResourceWrapper sw = new DisposableResourceWrapper())
-            {
-                // bee    
-            }
+            ResourceWrapper rw = new ResourceWrapper();
 
             Console.ReadKey();
         }
