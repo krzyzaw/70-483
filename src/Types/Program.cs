@@ -9,7 +9,6 @@ namespace Types
     {
         static void Main(string[] args)
         {
-            Order order = new Order();
             Console.ReadKey();
         }
     }

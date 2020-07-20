@@ -1,7 +1,13 @@
-﻿namespace Types.Classes
+﻿using System;
+
+namespace Types.Classes
 {
-    public class SportCar
+    public class SportCar : Car
     {
-        
+        public override void Accelerate()
+        {
+            Console.WriteLine("Accelerating a sport car...");
+            base.Accelerate();
+        }
     }
 }

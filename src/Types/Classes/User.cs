@@ -18,6 +18,8 @@ namespace Types.Classes
 
         public DateTime UpdatedAt { get; set; }
 
+        public decimal Funds { get; private set; }
+
         public User(string email, string password, int age)
         {
             SetEmail(email);
@@ -82,6 +84,27 @@ namespace Types.Classes
             IsActive = false;
         }
 
+        public void IncreaseFunds(decimal funds)
+        {
+            if (funds <= 0)
+                throw new Exception("Funds must be greater than 0.");
+
+            Funds += funds;
+            Update();
+        }
+
+        public void PurchaseOrder(Order order)
+        {
+            if (!IsActive)
+                throw new Exception("Only active user can purchase an order.");
+
+            if (Funds - order.TotalPrice < 0)
+                throw new Exception("You don't have enough money.");
+
+            order.Purchase();
+            Funds -= order.TotalPrice;
+            Update();
+        }
 
         private void Update()
         {
