@@ -14,8 +14,6 @@ namespace Types
     {
         static void Main(string[] args)
         {
-            Customer.Test();
-            CustomerLazyLoading.Test();
             Console.ReadKey();
         }
     }
