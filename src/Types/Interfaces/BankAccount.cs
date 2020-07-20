@@ -1,6 +1,9 @@
-﻿namespace Types.Interfaces
+﻿using System;
+using System.Collections.Generic;
+
+namespace Types.Interfaces
 {
-    public class BankAccount : IAccount
+    public class BankAccount : IAccount, IComparable
     {
         protected decimal _balance;
 
@@ -28,6 +31,39 @@
         public decimal GetBalance()
         {
             return _balance;
+        }
+
+        public int CompareTo(object? obj)
+        {
+            if (obj == null) return 1;
+
+            IAccount account = obj as IAccount;
+
+            if (account == null)
+            {
+                throw new ArgumentException("Object is not an account");
+            }
+
+            return _balance.CompareTo(account.GetBalance());
+        }
+
+        public static void SortAccount()
+        {
+            List<BankAccount> accounts = new List<BankAccount>();
+            Random random = new Random();
+
+            for (int i = 0; i < 20; i++)
+            {
+                BankAccount account = new BankAccount(random.Next(0, 100000));
+                accounts.Add(account);
+            }
+
+            accounts.Sort();
+
+            foreach (var account in accounts)
+            {
+                Console.WriteLine(account.GetBalance());
+            }
         }
     }
 }

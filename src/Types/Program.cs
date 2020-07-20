@@ -3,6 +3,7 @@ using Types.Classes;
 using Types.DataType;
 using Types.Extensions;
 using Types.Generic;
+using Types.Interfaces;
 
 namespace Types
 {
@@ -10,6 +11,7 @@ namespace Types
     {
         static void Main(string[] args)
         {
+            BankAccount.SortAccount();
             Console.ReadKey();
         }
     }
