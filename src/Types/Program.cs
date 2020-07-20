@@ -8,9 +8,8 @@ namespace Types
     {
         static void Main(string[] args)
         {
-            Value.TestStruct();
-            Value.TestDateTime();
-            Console.WriteLine(OrderType.Standard.GetDescription());
+            Reference.TestRef();
+            Reference.PersonManipulation();
             Console.ReadKey();
         }
     }
