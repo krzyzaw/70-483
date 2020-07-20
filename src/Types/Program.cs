@@ -5,6 +5,7 @@ using Types.DataType;
 using Types.Extensions;
 using Types.Generic;
 using Types.Interfaces;
+using Types.ObjectLifeCycle;
 
 namespace Types
 {
@@ -12,21 +13,12 @@ namespace Types
     {
         static void Main(string[] args)
         {
-            ReportHeader();
-            ReportHeaderDebug();
+            using (DisposableResourceWrapper sw = new DisposableResourceWrapper())
+            {
+                // bee    
+            }
+
             Console.ReadKey();
-        }
-
-        [Conditional("PROD")]
-        static void ReportHeader()
-        {
-            Console.WriteLine("Trace");
-        }
-
-        [Conditional("RELEASE")]
-        static void ReportHeaderDebug()
-        {
-            Console.WriteLine("Debug");
         }
     }
 }
