@@ -9,7 +9,7 @@ namespace Types.Interfaces
         private readonly IDatabase _database;
         private readonly IEmailSender _emailSender;
 
-        public OrderProcessor(IDatabase database, IEmailSender emailSender)
+        public OrderProcessor(IDatabase database, EmailSender emailSender)
         {
             _database = database;
             _emailSender = emailSender;
