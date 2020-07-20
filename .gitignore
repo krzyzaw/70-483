@@ -32,3 +32,5 @@ packages/
 *.pps
 *.pdf
 *.pptx
+/doc/70-483_Types_odp.pdf
+/doc/70-483_types.pdf
