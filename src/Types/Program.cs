@@ -1,4 +1,6 @@
 ﻿using System;
+using Types.DataType;
+using Types.Extensions;
 
 namespace Types
 {
@@ -6,7 +8,10 @@ namespace Types
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Value.TestStruct();
+            Value.TestDateTime();
+            Console.WriteLine(OrderType.Standard.GetDescription());
+            Console.ReadKey();
         }
     }
 }
