@@ -1,5 +1,6 @@
 ﻿using System;
 using DataAccess.Http;
+using DataAccess.SqlClient;
 using DataAccess.Streams;
 
 namespace DataAccess
@@ -8,7 +9,7 @@ namespace DataAccess
     {
         static void Main(string[] args)
         {
-            WebRequestExploration.TestWebRequest();
+            SqlClientExploration.ReadData();
             Console.ReadKey();
         }
     }
