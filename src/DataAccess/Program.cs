@@ -1,4 +1,5 @@
 ﻿using System;
+using DataAccess.Http;
 using DataAccess.Streams;
 
 namespace DataAccess
@@ -7,8 +8,7 @@ namespace DataAccess
     {
         static void Main(string[] args)
         {
-            //FileStreamExploration.TestFileStream();
-            FileStreamExploration.TestCompressedFiles();
+            WebRequestExploration.TestWebRequest();
             Console.ReadKey();
         }
     }
