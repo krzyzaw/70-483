@@ -9,7 +9,7 @@ namespace DataAccess
     {
         static void Main(string[] args)
         {
-            SqlClientExploration.ReadData();
+            SqlClientExploration.SqlInjectionExample();
             Console.ReadKey();
         }
     }
