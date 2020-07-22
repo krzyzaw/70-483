@@ -1,4 +1,5 @@
 ﻿using System;
+using DataAccess.ConsumeData;
 using DataAccess.Http;
 using DataAccess.SqlClient;
 using DataAccess.Streams;
@@ -9,7 +10,9 @@ namespace DataAccess
     {
         static void Main(string[] args)
         {
-            SqlClientExploration.SqlInjectionExample();
+            DataConsumer.TestJson();
+            DataConsumer.TestXml();
+
             Console.ReadKey();
         }
     }
