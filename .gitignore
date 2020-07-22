@@ -29,10 +29,6 @@ _ReSharper*/
 .vs/
 #Nuget packages folder
 packages/
-*.pps
 *.pdf
 *.pptx
-/doc/70-483_Types_odp.pdf
-/doc/70-483_types.pdf
-/doc/70-483.pptx
-/doc/70-483.pptx
+
