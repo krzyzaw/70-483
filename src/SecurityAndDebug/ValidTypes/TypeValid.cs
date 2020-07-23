@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Globalization;
 
-namespace DebugAndSecurity.InputValid
+namespace SecurityAndDebug.ValidTypes
 {
     public class TypeValid
     {
