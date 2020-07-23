@@ -1,4 +1,5 @@
 ﻿using System;
+using SecurityAndDebug.Crypto;
 using SecurityAndDebug.ValidTypes;
 
 namespace SecurityAndDebug
@@ -7,7 +8,7 @@ namespace SecurityAndDebug
     {
         static void Main(string[] args)
         {
-            RegexExploration.RegexReplace();
+            AesExploration.Encrypt();
             Console.ReadKey();
         }
     }
