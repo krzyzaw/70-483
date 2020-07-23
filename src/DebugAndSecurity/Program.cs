@@ -1,4 +1,5 @@
 ﻿using System;
+using DebugAndSecurity.InputValid;
 
 namespace DebugAndSecurity
 {
@@ -6,7 +7,8 @@ namespace DebugAndSecurity
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TypeValid.UseTryParse();
+            Console.ReadKey();
         }
     }
 }
