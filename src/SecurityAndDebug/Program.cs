@@ -8,7 +8,7 @@ namespace SecurityAndDebug
     {
         static void Main(string[] args)
         {
-            RsaExploration.Encrypt();
+            RsaExploration.UseMachineKeyStorage();
             Console.ReadKey();
         }
     }

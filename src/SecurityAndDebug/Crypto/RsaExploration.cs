@@ -50,5 +50,30 @@ namespace SecurityAndDebug.Crypto
 
             Console.WriteLine();
         }
+
+        public static void UseUserKeyStorage()
+        {
+            string containerName = "MyKeyStore";
+
+            CspParameters csp = new CspParameters();
+            csp.KeyContainerName = containerName;
+
+            RSACryptoServiceProvider rsaStore = new RSACryptoServiceProvider(csp);
+            Console.WriteLine($"Stored keys: {rsaStore.ToXmlString(includePrivateParameters:true)}");
+
+            RSACryptoServiceProvider rsaLoad = new RSACryptoServiceProvider(csp);
+            Console.WriteLine($"Loaded keys: {rsaLoad.ToXmlString(includePrivateParameters: true)}");
+        }
+
+        public static void UseMachineKeyStorage()
+        {
+            CspParameters cspParameters = new CspParameters();
+            cspParameters.KeyContainerName = "Machine level key";
+
+            cspParameters.Flags = CspProviderFlags.UseMachineKeyStore;
+            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(cspParameters);
+
+            Console.WriteLine(rsa.ToXmlString(includePrivateParameters:true));
+        }
     }
 }
