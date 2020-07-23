@@ -15,5 +15,6 @@ namespace MusicStore.Data
         }
 
         public DbSet<MusicStore.Entities.MusicTrack> MusicTrack { get; set; }
+        public DbSet<MusicStore.Entities.Artist> Artist { get; set; }
     }
 }
