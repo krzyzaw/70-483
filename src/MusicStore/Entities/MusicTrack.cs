@@ -1,4 +1,6 @@
-﻿namespace MusicStore.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MusicStore.Entities
 {
     public class MusicTrack
     {
@@ -8,6 +10,10 @@
 
         public string Title { get; set; }
 
+        [Range(20,600)]
         public int Length { get; set; }
+
+        [EmailAddress]
+        public string Email { get; set; }
     }
 }

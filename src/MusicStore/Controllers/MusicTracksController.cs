@@ -22,7 +22,7 @@ namespace MusicStore.Controllers
         // GET: MusicTracks
         public async Task<IActionResult> Index()
         {
-            return View(await _context.MusicTrack.ToListAsync());
+            return View(new List<MusicTrack>());
         }
 
         // GET: MusicTracks/Details/5
