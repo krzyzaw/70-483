@@ -1,4 +1,5 @@
 ﻿using System;
+using SecurityAndDebug.ValidTypes;
 
 namespace SecurityAndDebug
 {
@@ -6,7 +7,8 @@ namespace SecurityAndDebug
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            RegexExploration.RegexReplace();
+            Console.ReadKey();
         }
     }
 }
