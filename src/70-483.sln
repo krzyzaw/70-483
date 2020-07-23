@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Types", "Types\Types.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{8BA16D44-FE31-4CEA-A18D-A36EF9E5DCB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore", "MusicStore\MusicStore.csproj", "{74F64A50-B32B-44C8-BA76-C3001F5BC050}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore", "MusicStore\MusicStore.csproj", "{74F64A50-B32B-44C8-BA76-C3001F5BC050}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugAndSecurity", "DebugAndSecurity\DebugAndSecurity.csproj", "{9B5AA906-B47B-4E18-95AA-69CAFEFFEB93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +36,12 @@ Global
 		{74F64A50-B32B-44C8-BA76-C3001F5BC050}.PROD|Any CPU.Build.0 = Debug|Any CPU
 		{74F64A50-B32B-44C8-BA76-C3001F5BC050}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74F64A50-B32B-44C8-BA76-C3001F5BC050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B5AA906-B47B-4E18-95AA-69CAFEFFEB93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5AA906-B47B-4E18-95AA-69CAFEFFEB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B5AA906-B47B-4E18-95AA-69CAFEFFEB93}.PROD|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5AA906-B47B-4E18-95AA-69CAFEFFEB93}.PROD|Any CPU.Build.0 = Debug|Any CPU
+		{9B5AA906-B47B-4E18-95AA-69CAFEFFEB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B5AA906-B47B-4E18-95AA-69CAFEFFEB93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
