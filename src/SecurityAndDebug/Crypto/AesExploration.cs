@@ -74,7 +74,7 @@ namespace SecurityAndDebug.Crypto
             Console.Write(title);
             foreach (var b in bytes)
             {
-                Console.Write($"{b:X}");
+                Console.Write($"{b:X} ");
             }
 
             Console.WriteLine();
