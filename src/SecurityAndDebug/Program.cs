@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Threading.Tasks;
-using SecurityAndDebug.ApplicationDeb;
-using SecurityAndDebug.Crypto;
-using SecurityAndDebug.ValidTypes;
 
 namespace SecurityAndDebug
 {
@@ -11,30 +6,10 @@ namespace SecurityAndDebug
     {
         static void Main(string[] args)
         {
-            DisplayTestInfo();
-            DisplayDebugInfo();
-
+            int i = 99;
+            int j = 100;
+            Console.WriteLine($"The value in j is {j}");
             Console.ReadKey();
         }
-
-        [Conditional("TEST")]
-        public static void DisplayTestInfo()
-        {
-
-        }
-
-        [Conditional("DEBUG")]
-        public static void DisplayDebugInfo()
-        {
-
-        }
-
-#pragma warning disable
-
-        public async Task Test()
-        {
-        }
-
-#pragma warning restore
     }
 }
