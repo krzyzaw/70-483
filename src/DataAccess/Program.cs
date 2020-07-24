@@ -23,9 +23,8 @@ namespace DataAccess
             ConfigureServices(serviceCollection);
             var serviceProvider = serviceCollection.BuildServiceProvider();
 
-            LinqData test = new LinqData((MusicStoreContext)serviceProvider.GetService(typeof(MusicStoreContext)));
-            var linqOperations = test.LinqOperations();
-            SerializeExploration.SerializeToBinary(linqOperations);
+            DataCollection.DataCollection.UseArray();
+            DataCollection.DataCollection.UseArrayList();
 
             Console.ReadKey();
         }

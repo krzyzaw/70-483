@@ -2,7 +2,6 @@
 
 namespace MusicStore.Entities
 {
-    [Serializable]
     public class Artist
     {
         public int Id { get; set; }
