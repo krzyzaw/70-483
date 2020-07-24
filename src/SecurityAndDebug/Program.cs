@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using SecurityAndDebug.ApplicationDeb;
 using SecurityAndDebug.Crypto;
 using SecurityAndDebug.ValidTypes;
@@ -9,9 +10,23 @@ namespace SecurityAndDebug
     {
         static void Main(string[] args)
         {
-            MusicTrack track = new MusicTrack(artist:"Jan", "Kowalski", 100);
+            DisplayTestInfo();
+            DisplayDebugInfo();
 
             Console.ReadKey();
+        }
+
+
+        [Conditional("TEST")]
+        public static void DisplayTestInfo()
+        {
+
+        }
+
+        [Conditional("DEBUG")]
+        public static void DisplayDebugInfo()
+        {
+
         }
     }
 }

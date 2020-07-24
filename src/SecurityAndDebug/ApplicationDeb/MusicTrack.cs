@@ -19,9 +19,8 @@ namespace SecurityAndDebug.ApplicationDeb
             Artist = artist;
             Title = title;
             Length = length;
-#if DIAGNOSTIC
+
             Console.WriteLine($"Music track created: {this}");
-#endif
         }
     }
 }
