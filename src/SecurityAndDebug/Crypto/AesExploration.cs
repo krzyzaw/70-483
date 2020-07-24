@@ -39,8 +39,6 @@ namespace SecurityAndDebug.Crypto
             DumbBytes("Encrypted: ", cipherText);
 
             Decrypt(key, initializationVector, cipherText);
-
-            Console.ReadKey();
         }
 
         public static void Decrypt(byte[] key, byte[] initializationVector, byte[] cipherText)
