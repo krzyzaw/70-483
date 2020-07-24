@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using SecurityAndDebug.ApplicationDeb;
 using SecurityAndDebug.Crypto;
 using SecurityAndDebug.ValidTypes;
@@ -16,7 +17,6 @@ namespace SecurityAndDebug
             Console.ReadKey();
         }
 
-
         [Conditional("TEST")]
         public static void DisplayTestInfo()
         {
@@ -28,5 +28,13 @@ namespace SecurityAndDebug
         {
 
         }
+
+#pragma warning disable
+
+        public async Task Test()
+        {
+        }
+
+#pragma warning restore
     }
 }
