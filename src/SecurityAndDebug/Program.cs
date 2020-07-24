@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using SecurityAndDebug.ProfileAppliaction;
 
 namespace SecurityAndDebug
 {
@@ -7,7 +8,6 @@ namespace SecurityAndDebug
     {
         static void Main(string[] args)
         {
-            ProfileAppliaction.ProfileExploration.Test();
             Console.ReadKey();
         }
     }
