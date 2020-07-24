@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SecurityAndDebug.ApplicationDebug
+namespace SecurityAndDebug.ApplicationDeb
 {
     public class MusicTrack
     {

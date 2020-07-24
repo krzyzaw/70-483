@@ -1,5 +1,5 @@
 ﻿using System;
-using SecurityAndDebug.ApplicationDebug;
+using SecurityAndDebug.ApplicationDeb;
 using SecurityAndDebug.Crypto;
 using SecurityAndDebug.ValidTypes;
 
