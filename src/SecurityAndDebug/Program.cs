@@ -8,7 +8,9 @@ namespace SecurityAndDebug
     {
         static void Main(string[] args)
         {
-            Cert.Test();
+            CheckSum.ShowCheckSum("Hello world");
+            CheckSum.ShowCheckSum("world hello");
+            CheckSum.ShowCheckSum("Hmmmm world");
             Console.ReadKey();
         }
     }
