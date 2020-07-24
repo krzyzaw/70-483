@@ -8,9 +8,15 @@ namespace SecurityAndDebug
     {
         static void Main(string[] args)
         {
-            CheckSum.ShowCheckSum("Hello world");
-            CheckSum.ShowCheckSum("world hello");
-            CheckSum.ShowCheckSum("Hmmmm world");
+            var md5 = HashFunction.CreateMd5("Test");
+            Console.WriteLine(md5);
+
+            var sha1 = HashFunction.CreateSha1("Test");
+            Console.WriteLine(sha1);
+
+            var bytes = HashFunction.CreateSha2("Test");
+            HashFunction.ShowHash(bytes);
+
             Console.ReadKey();
         }
     }
