@@ -9,7 +9,6 @@ namespace SecurityAndDebug
     {
         static void Main(string[] args)
         {
-            MusicTrack.DebugMode = true;
             MusicTrack track = new MusicTrack(artist:"Jan", "Kowalski", 100);
 
             Console.ReadKey();

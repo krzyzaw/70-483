@@ -1,11 +1,10 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace SecurityAndDebug.ApplicationDeb
 {
     public class MusicTrack
     {
-        public static bool DebugMode = false;
-
         public string Artist { get; set; }
 
         public string Title { get; set; }
@@ -20,10 +19,9 @@ namespace SecurityAndDebug.ApplicationDeb
             Artist = artist;
             Title = title;
             Length = length;
-            if (DebugMode)
-            {
-                Console.WriteLine($"Music track created: {this}");
-            }
+#if DIAGNOSTIC
+            Console.WriteLine($"Music track created: {this}");
+#endif
         }
     }
 }
