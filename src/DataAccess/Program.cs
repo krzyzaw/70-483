@@ -3,6 +3,7 @@ using System.IO;
 using DataAccess.ConsumeData;
 using DataAccess.Http;
 using DataAccess.Linq;
+using DataAccess.ObjectSerialization;
 using DataAccess.SqlClient;
 using DataAccess.Streams;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +24,8 @@ namespace DataAccess
             var serviceProvider = serviceCollection.BuildServiceProvider();
 
             LinqData test = new LinqData((MusicStoreContext)serviceProvider.GetService(typeof(MusicStoreContext)));
-            test.ReadData();
+            var linqOperations = test.LinqOperations();
+            SerializeExploration.SerializeToBinary(linqOperations);
 
             Console.ReadKey();
         }
