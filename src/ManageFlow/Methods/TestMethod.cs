@@ -16,5 +16,12 @@ namespace ManageFlow.Methods
             b = "Enjoy your string.";
             c = true;
         }
+
+        public static void SwapStrings(ref string s1, ref string s2)
+        {
+            string tempStr = s1;
+            s1 = s2;
+            s2 = tempStr;
+        }
     }
 }
