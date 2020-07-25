@@ -8,14 +8,13 @@ namespace ManageFlow
     {
         static void Main(string[] args)
         {
-            TestMethod.Add(1, 2, out int ans);
-            Console.WriteLine(ans);
+            string str1 = "Flip";
+            string str2 = "Flop";
+            Console.WriteLine($"Before: {str1}, {str2}");
+            TestMethod.SwapStrings(ref str1, ref str2);
+            Console.WriteLine($"After: {str1}, {str2}");
+            Console.ReadLine();
 
-            TestMethod.ReturnManyValue(out var i, out var str, out var b);
-            Console.WriteLine("Int is: {0}", i);
-            Console.WriteLine("String is: {0}", str);
-            Console.WriteLine("Boolean is: {0}", b);
-            
             Console.ReadKey();
         }
     }
