@@ -6,7 +6,9 @@ namespace ManageFlow
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Loops.LoopsExploration.TestBrakeStatement();
+            Loops.LoopsExploration.TestContinueStatement();
+            Console.ReadKey();
         }
     }
 }

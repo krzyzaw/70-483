@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ManageFlow.Loops
 {
@@ -14,7 +15,7 @@ namespace ManageFlow.Loops
 
         public static void TestForeach()
         {
-            string[] carTypes = {"Ford", "BMW", "Yugo", "Honda"};
+            string[] carTypes = { "Ford", "BMW", "Yugo", "Honda" };
             foreach (string c in carTypes)
             {
                 Console.WriteLine(c);
@@ -41,6 +42,30 @@ namespace ManageFlow.Loops
                 Console.WriteLine("In do/while loop");
                 userIsDone = Console.ReadLine();
             } while (userIsDone?.ToLower() != "yes");
+        }
+
+        public static void TestBrakeStatement()
+        {
+            string[] names = { "Adam", "Jan", "Ewa", "Maria" };
+
+            for (int index = 0; index < names.Length; index++)
+            {
+                Console.WriteLine(names[index]);
+                if (names[index] == "Ewa") break;
+            }
+        }
+
+        public static void TestContinueStatement()
+        {
+            string[] names = { "Adam", "Jan", "Ewa", "Maria" };
+
+            for (int index = 0; index < names.Length; index++)
+            {
+                Console.WriteLine(names[index]);
+                if (names[index] == "Ewa") continue;
+
+                Console.WriteLine(names[index]);
+            }
         }
     }
 }
