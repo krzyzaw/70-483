@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore", "MusicStore\Mu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecurityAndDebug", "SecurityAndDebug\SecurityAndDebug.csproj", "{16A63FFE-47C8-4918-A6D4-6EFF9E3740A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageFlow", "ManageFlow\ManageFlow.csproj", "{704DC41A-0EEA-4812-90A7-C48C8EA5EE08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,12 @@ Global
 		{16A63FFE-47C8-4918-A6D4-6EFF9E3740A7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{16A63FFE-47C8-4918-A6D4-6EFF9E3740A7}.Test|Any CPU.ActiveCfg = Test|Any CPU
 		{16A63FFE-47C8-4918-A6D4-6EFF9E3740A7}.Test|Any CPU.Build.0 = Test|Any CPU
+		{704DC41A-0EEA-4812-90A7-C48C8EA5EE08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{704DC41A-0EEA-4812-90A7-C48C8EA5EE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{704DC41A-0EEA-4812-90A7-C48C8EA5EE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{704DC41A-0EEA-4812-90A7-C48C8EA5EE08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{704DC41A-0EEA-4812-90A7-C48C8EA5EE08}.Test|Any CPU.ActiveCfg = Debug|Any CPU
+		{704DC41A-0EEA-4812-90A7-C48C8EA5EE08}.Test|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
