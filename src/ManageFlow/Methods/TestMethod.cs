@@ -5,7 +5,7 @@ namespace ManageFlow.Methods
 {
     public class TestMethod
     {
-        public static int Add(int x, int y)
+        public int Add(int x, int y)
             => x + y;
 
         public static void Add(int x, int y, out int ans)
