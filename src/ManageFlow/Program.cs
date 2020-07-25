@@ -8,12 +8,13 @@ namespace ManageFlow
     {
         static void Main(string[] args)
         {
-            string str1 = "Flip";
-            string str2 = "Flop";
-            Console.WriteLine($"Before: {str1}, {str2}");
-            TestMethod.SwapStrings(ref str1, ref str2);
-            Console.WriteLine($"After: {str1}, {str2}");
-            Console.ReadLine();
+            double average;
+            average = TestMethod.CalculateAverage("test", 4.0, 3.2, 5.7, 64.22, 87.2);
+            Console.WriteLine($"Average of data is: {average}");
+
+            double[] data = { 4.0, 3.2, 5.7 };
+            average = TestMethod.CalculateAverage("test", data);
+            Console.WriteLine($"Average of data is: {average}");
 
             Console.ReadKey();
         }
