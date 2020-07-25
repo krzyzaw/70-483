@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MusicStore.Entities
 {
@@ -15,8 +16,5 @@ namespace MusicStore.Entities
 
         [Range(20,600)]
         public int Length { get; set; }
-
-        [EmailAddress]
-        public string Email { get; set; }
     }
 }

@@ -17,13 +17,19 @@ namespace DataAccess.Linq
 
         public void ReadData()
         {
-            var musicTracks = _context.MusicTrack.Include(x => x.Artist);
+            var musicTracks = _context.MusicTrack.Include(x => x.Artist).AsQueryable();
+
+            var count = _context.MusicTrack.Include(x => x.Artist).Where(x => x.ArtistId == 5).Sum(x => x.Length);
+
+            List<MusicTrack> musicTracks1 = _context.MusicTrack.Include(x => x.Artist).Where(y => y.ArtistId == 5).ToList();
 
             //basic linq operator
             IEnumerable<MusicTrack> selectedTracks = from track in musicTracks where track.ArtistId == 5 select track;
 
             //linq method chain
-            IEnumerable<MusicTrack> selectedTracksChain = musicTracks.Where(track => track.ArtistId == 5);
+            IQueryable<MusicTrack> selectedTracksChain = musicTracks.Where(track => track.ArtistId == 5).AsQueryable();
+
+            var tracks = selectedTracksChain.ToList();
 
             //use var
             var selectedTracksVar = musicTracks.Where(track => track.ArtistId == 5);

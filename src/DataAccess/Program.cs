@@ -23,8 +23,8 @@ namespace DataAccess
             ConfigureServices(serviceCollection);
             var serviceProvider = serviceCollection.BuildServiceProvider();
 
-            DataCollection.DataCollection.UseArray();
-            DataCollection.DataCollection.UseArrayList();
+            LinqData test = new LinqData((MusicStoreContext)serviceProvider.GetService(typeof(MusicStoreContext)));
+            test.ReadData();
 
             Console.ReadKey();
         }
