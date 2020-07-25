@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
+using ManageFlow.Delegates;
 using ManageFlow.Methods;
 
 namespace ManageFlow
@@ -8,14 +8,10 @@ namespace ManageFlow
     {
         static void Main(string[] args)
         {
-            double average;
-            average = TestMethod.CalculateAverage("test", 4.0, 3.2, 5.7, 64.22, 87.2);
-            Console.WriteLine($"Average of data is: {average}");
+            DelegatesExploration.SimpleMath simpleMath = new DelegatesExploration.SimpleMath(TestMethod.Add);
 
-            double[] data = { 4.0, 3.2, 5.7 };
-            average = TestMethod.CalculateAverage("test", data);
-            Console.WriteLine($"Average of data is: {average}");
-
+            //Wywołanie metody Add() pośrednio, używając obiektu delegatu (pod spodem wywoływana jest metoda Invoke() -> ildasm)
+            Console.WriteLine($"10 + 20 = {simpleMath(10, 20)}");
             Console.ReadKey();
         }
     }
