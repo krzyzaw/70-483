@@ -28,6 +28,11 @@ namespace ManageFlow.Delegates
             _listOfHandlers += methodToCall;
         }
 
+        public void UnRegisterWithCarEngine(CarEngineHandler methodToCall)
+        {
+            _listOfHandlers -= methodToCall;
+        }
+
         public void Accelerate(int delta)
         {
             if (carIsDead)
