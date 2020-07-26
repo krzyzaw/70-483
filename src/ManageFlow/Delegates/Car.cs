@@ -4,9 +4,7 @@ namespace ManageFlow.Delegates
 {
     public class Car
     {
-        public delegate void CarEngineHandler(string msgForCaller);
-
-        private CarEngineHandler _listOfHandlers;
+        private Action<string> _handlers;
 
         public int CurrentSpeed { get; set; }
 
@@ -23,32 +21,32 @@ namespace ManageFlow.Delegates
             Brand = brand;
         }
 
-        public void RegisterWithCarEngine(CarEngineHandler methodToCall)
+        public void RegisterWithCarEngine(Action<string> methodToCall)
         {
-            _listOfHandlers += methodToCall;
+            _handlers += methodToCall;
         }
 
-        public void UnRegisterWithCarEngine(CarEngineHandler methodToCall)
+        public void UnRegisterWithCarEngine(Action<string> methodToCall)
         {
-            _listOfHandlers -= methodToCall;
+            _handlers -= methodToCall;
         }
 
         public void Accelerate(int delta)
         {
             if (carIsDead)
             {
-                if (_listOfHandlers != null)
+                if (_handlers != null)
                 {
-                    _listOfHandlers("Samochód niesprawny");
+                    _handlers("Samochód niesprawny");
                 }
             }
             else
             {
                 CurrentSpeed += delta;
 
-                if (10 > (MaxSpeed - CurrentSpeed) && _listOfHandlers != null)
+                if (10 > (MaxSpeed - CurrentSpeed) && _handlers != null)
                 {
-                    _listOfHandlers("Uważaj, silnik zaraz wybuchnie!");
+                    _handlers("Uważaj, silnik zaraz wybuchnie!");
                 }
 
                 if (CurrentSpeed > MaxSpeed)
