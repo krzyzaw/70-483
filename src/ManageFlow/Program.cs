@@ -8,7 +8,7 @@ namespace ManageFlow
     {
         static void Main(string[] args)
         {
-            GenericDelegate.TestGenericDelegate();
+            ActionFunc.TestAction();
             Console.ReadLine();
         }
     }
