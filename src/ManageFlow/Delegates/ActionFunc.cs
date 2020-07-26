@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using ManageFlow.Methods;
 
 namespace ManageFlow.Delegates
@@ -23,5 +26,14 @@ namespace ManageFlow.Delegates
 
             Console.ForegroundColor = previous;
         }
+
+        public static void TestFunc()
+        {
+            Func<int, int, int > adder = Add;
+            int result = adder.Invoke(10, 20);
+            Console.WriteLine(result);
+        }
+
+        public static int Add(int x, int y) => x + y;
     }
 }

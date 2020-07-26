@@ -8,15 +8,10 @@ namespace ManageFlow
     {
         static void Main(string[] args)
         {
-            Car car = new Car(brand: "Ford", maxSpeed: 100, currentSpeed: 10);
+            UserRepository userRepository = new UserRepository();
 
-            car.RegisterWithCarEngine(Car.OnCarEngineEvent);
-            car.RegisterWithCarEngine(Car.OnCarEngineEvent2);
+            userRepository.First(x => x.Id == 1);
 
-            Console.WriteLine("***** Speeding up *****");
-
-            for (int i = 0; i < 6; i++)
-                car.Accelerate(20);
             Console.ReadLine();
         }
     }
