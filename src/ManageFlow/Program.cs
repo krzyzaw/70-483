@@ -8,10 +8,7 @@ namespace ManageFlow
     {
         static void Main(string[] args)
         {
-            UserRepository userRepository = new UserRepository();
-
-            userRepository.First(x => x.Id == 1);
-
+            LambdaExpressions.Test();
             Console.ReadLine();
         }
     }
