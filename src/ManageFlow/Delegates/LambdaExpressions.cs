@@ -52,20 +52,5 @@ namespace ManageFlow.Delegates
                 Thread.Sleep(500);
             }
         }
-
-        public static void OptimalAlert(int change)
-        {
-            Console.WriteLine($"Temperature is optimal (change by {change})");
-        }
-
-        public static void TooHighAlert(int change)
-        {
-            Console.WriteLine($"Temperature is too high (change by {change})");
-        }
-
-        public static void TooLowAlert(int change)
-        {
-            Console.WriteLine($"Temperature is too low (change by {change})");
-        }
     }
 }

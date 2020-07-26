@@ -8,7 +8,9 @@ namespace ManageFlow
     {
         static void Main(string[] args)
         {
-            LambdaExpressions.Test();
+            var events = new Events();
+            events.StartUpdatingStatus();
+
             Console.ReadLine();
         }
     }
