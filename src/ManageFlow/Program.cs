@@ -8,8 +8,8 @@ namespace ManageFlow
     {
         static void Main(string[] args)
         {
-            var events = new Events();
-            events.StartUpdatingStatus();
+            var eventSandbox = new EventSandbox();
+            eventSandbox.Test();
 
             Console.ReadLine();
         }
