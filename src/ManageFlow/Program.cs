@@ -8,14 +8,17 @@ namespace ManageFlow
     {
         static void Main(string[] args)
         {
-            TestMethod testMethod = new TestMethod();
-            DelegatesExploration.SimpleMath simpleMath = new DelegatesExploration.SimpleMath(testMethod.Add);
+            Car car = new Car(brand:"Ford",maxSpeed: 100, currentSpeed: 10);
+            // Zwiększ prędkość (w ten sposób zostaną wyzwolone zdarzenia).
+            Console.WriteLine("***** Speeding up *****");
+            
+            for (int i = 0; i < 6; i++)
+                car.Accelerate(20);
 
-            //Wywołanie metody Add() pośrednio, używając obiektu delegatu (pod spodem wywoływana jest metoda Invoke() -> ildasm)
-            Console.WriteLine($"10 + 20 = {simpleMath(10, 20)}");
-            DelegatesExploration.DisplayDelegateInfo(simpleMath);
-
-            Console.ReadKey();
+            Console.ReadLine();
         }
+
+        
     }
 }
+
