@@ -6,7 +6,7 @@ namespace ManageFlow.Delegates
     {
         public delegate void CarEngineHandler(string msgForCaller);
 
-        public  CarEngineHandler Handler = OnCarEngineEvent;
+        private CarEngineHandler _listOfHandlers;
 
         public int CurrentSpeed { get; set; }
 
@@ -23,34 +23,46 @@ namespace ManageFlow.Delegates
             Brand = brand;
         }
 
+        public void RegisterWithCarEngine(CarEngineHandler methodToCall)
+        {
+            _listOfHandlers += methodToCall;
+        }
+
         public void Accelerate(int delta)
         {
             if (carIsDead)
             {
-                if (Handler != null)
+                if (_listOfHandlers != null)
                 {
-                    Handler("Samochód niesprawny");
+                    _listOfHandlers("Samochód niesprawny");
                 }
             }
             else
             {
                 CurrentSpeed += delta;
 
-                if (10 > (MaxSpeed - CurrentSpeed) && Handler != null)
+                if (10 > (MaxSpeed - CurrentSpeed) && _listOfHandlers != null)
                 {
-                    Handler("Uważaj, silnik zaraz wybuchnie!");
+                    _listOfHandlers("Uważaj, silnik zaraz wybuchnie!");
                 }
 
                 if (CurrentSpeed > MaxSpeed)
                     carIsDead = true;
                 else
-                    Console.WriteLine($"Current speed: {CurrentSpeed}");
+                    Console.WriteLine($"Aktualna prędkość: {CurrentSpeed}");
             }
         }
 
         public static void OnCarEngineEvent(string msg)
         {
-            Console.WriteLine("\n***** Message From Car Object *****");
+            Console.WriteLine("\n***** Wiadomość z obiektu Car *****");
+            Console.WriteLine("=> {0}", msg);
+            Console.WriteLine("***********************************\n");
+        }
+
+        public static void OnCarEngineEvent2(string msg)
+        {
+            Console.WriteLine("\n***** UWAŻAJ!!! *****");
             Console.WriteLine("=> {0}", msg);
             Console.WriteLine("***********************************\n");
         }
