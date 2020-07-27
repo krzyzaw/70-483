@@ -1,5 +1,6 @@
 ﻿using System;
 using ManageFlow.Delegates;
+using ManageFlow.Exceptions;
 using ManageFlow.Methods;
 
 namespace ManageFlow
@@ -8,9 +9,7 @@ namespace ManageFlow
     {
         static void Main(string[] args)
         {
-            var eventSandbox = new EventSandbox();
-            eventSandbox.Test();
-
+            Exceptions.Exceptions.Test();
             Console.ReadLine();
         }
     }
