@@ -40,7 +40,11 @@ namespace ManageFlow.Exceptions
                     CurrentSpeed = 0;
                     IsDead = true;
 
-                    throw new Exception($"{BusNumber} has overheated!");
+                    Exception ex = new Exception($"{BusNumber} has overheated!");
+                    ex.HelpLink = "https://docs.microsoft.com/";
+                    ex.Data.Add("TimeStamp", DateTime.Now);
+                    ex.Data.Add("Cause", "You have a lead foot.");
+                    throw ex;
                 }
                 else
                     Console.WriteLine($"=> CurrentSpeed = {CurrentSpeed}");
