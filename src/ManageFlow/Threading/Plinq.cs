@@ -21,7 +21,7 @@ namespace ManageFlow.Threading
             counter.Start();
 
             // Uzyskaj bardzo dużą tablicę wartości całkowitoliczbowych.
-            int[] source = Enumerable.Range(1, 10000000).ToArray();
+            int[] source = Enumerable.Range(1000000, 10000000).ToArray();
             
             // Znajdź liczby spełniające warunek num % 3 == 0,
             // zwróć w kolejności malejącej.
