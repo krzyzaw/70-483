@@ -37,9 +37,10 @@ namespace ManageFlow.Exceptions
                 CurrentSpeed += delta;
                 if (CurrentSpeed > MaxSpeed)
                 {
-                    Console.WriteLine($"{BusNumber} has overheated!");
                     CurrentSpeed = 0;
                     IsDead = true;
+
+                    throw new Exception($"{BusNumber} has overheated!");
                 }
                 else
                     Console.WriteLine($"=> CurrentSpeed = {CurrentSpeed}");
