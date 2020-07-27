@@ -11,8 +11,8 @@ namespace ManageFlow
     {
         static void Main(string[] args)
         {
-            TaskExploration tx = new TaskExploration();
-            tx.Test();
+            Plinq plinq = new Plinq();
+            plinq.Test();
 
            Console.ReadLine();
         }
