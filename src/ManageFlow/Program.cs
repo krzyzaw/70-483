@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Threading.Tasks;
 using ManageFlow.Delegates;
 using ManageFlow.Exceptions;
 using ManageFlow.Methods;
@@ -9,12 +10,12 @@ namespace ManageFlow
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Plinq plinq = new Plinq();
-            plinq.Test();
+            AsyncAwait asyncAwait = new AsyncAwait();
+            await asyncAwait.Test();
 
-           Console.ReadLine();
+            Console.ReadLine();
         }
     }
 }
