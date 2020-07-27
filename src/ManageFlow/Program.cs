@@ -9,7 +9,16 @@ namespace ManageFlow
     {
         static void Main(string[] args)
         {
-            Exceptions.Exceptions.Test();
+            try
+            {
+                Exceptions.Exceptions.Test();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
             Console.ReadLine();
         }
     }

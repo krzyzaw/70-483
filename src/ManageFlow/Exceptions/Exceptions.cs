@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace ManageFlow.Exceptions
 {
@@ -16,9 +17,25 @@ namespace ManageFlow.Exceptions
             }
             catch (BusIsDeadException e)
             {
+                try
+                {
+                    FileStream fs = File.Open(@"C:\carErrors.txt", FileMode.Open);
+                    //... zapisanie wyjątku do pliku
+                }
+                catch (Exception exception)
+                {
+                    throw new BusIsDeadException(e.Message, exception);
+                }
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
                 Console.WriteLine(e.Message);
-                Console.WriteLine(e.ErrorTimeStamp);
-                Console.WriteLine(e.CauseOfError);
+            }
+            // Tutaj przechwycone zostaną wszystkie wyjątki oprócz
+            // CarIsDeadException i ArgumentOutOfRangeException.
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
         }
     }
