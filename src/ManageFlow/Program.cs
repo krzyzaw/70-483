@@ -11,7 +11,8 @@ namespace ManageFlow
     {
         static void Main(string[] args)
         {
-            ThreadExploration.TestMethod();
+            TaskExploration tx = new TaskExploration();
+            tx.Test();
 
            Console.ReadLine();
         }
