@@ -30,6 +30,9 @@ namespace ManageFlow.Exceptions
 
         public void Accelerate(int delta)
         {
+            if (delta < 0)
+                throw new ArgumentOutOfRangeException("delta", "Speed mut be greater than zero.");
+
             if (IsDead)
                 Console.WriteLine($"{BusNumber} is out of order...");
             else
